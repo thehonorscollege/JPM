@@ -1,0 +1,2 @@
+
+$checkout->addToConfig('new_key', 'new_value');
