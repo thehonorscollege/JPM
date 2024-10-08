@@ -1,0 +1,8 @@
+[
+    "statusCode"        =>    $info['http_code'],
+    "responseStatus"    => "ok",
+    "responseMessage"    => "normal redirect to payment page",
+    "requestID"            => $requestId,
+    "orderNumber"        => $orderNumber,
+    "merchantID"        => $this->config['merchant_id'],
+];
