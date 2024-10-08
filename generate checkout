@@ -1,0 +1,38 @@
+require_once 'uh/vendors/jpmorgan/checkout.php';
+$jpmorgan = new checkout('/publish/lib/auth/jp_morgan_payment_configs/test-certs/config1.json');
+
+
+$jpmorgan->addItem([
+            "id"=>"ITEM$lp",
+            "name"=>"Item $lp",
+            "description"=>"this is an item desc of $lp",
+            "quantity"=>"1",
+            "unitPrice"=>"$x"
+            "imageUrl" => "<optional> can be url or base64 encoded image"
+    ]);
+
+/* OPTIONAL */
+$jpmorgan->setCustomer([
+        "email"=>"rbirkline@uh.edu",
+        "phone"=>"26493",
+        "name"=>"Robert Birkline",
+        "address1"=>"my address",
+        "address2"=>"my address 2",
+        "city"=>"Houston",
+        "state"=>"Texas",
+        "country"=>"US",
+        "postalCode"=>"77204"
+]);
+
+/* OPTIONAL */
+$jpmorgan->setShippingAddress([
+        "name"=>"Shipping",
+        "address1"=>"Ship 1",
+        "address2"=>"Ship 2",
+        "city"=>"Houston 2",
+        "state"=>"some state",
+        "country"=>"US",
+        "postalCode"=>"11111"
+]);
+
+$request = $jpmorgan->generateCheckoutRequest();
