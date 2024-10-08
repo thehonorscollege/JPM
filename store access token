@@ -1,0 +1,2 @@
+setcookie('aToken', $jpmorgan->getConfig('accessToken'), (time()+60*15), '/', '.uh.edu', true, true );
+setcookie('tOrderNumber', $request['orderNumber'], (time()+60*15), '/', '.uh.edu', true, true );
