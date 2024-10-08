@@ -1,0 +1,4 @@
+
+require_once 'uh/vendors/jpmorgan/checkout.php';
+$configPath = 'path/to/config.json';
+$checkout = new checkout($configPath);
