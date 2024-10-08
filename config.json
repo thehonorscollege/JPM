@@ -1,0 +1,8 @@
+
+{
+   "privateKey": "path/to/private/key",
+   "certPath": "path/to/cert",
+   "client_id": "your_client_id",
+   "resource_id": "your_resource_id",
+   "merchant_id": "your_merchant_id"
+}
