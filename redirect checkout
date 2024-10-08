@@ -1,0 +1,7 @@
+if ($request['redirectedUrl']){
+    header("Location: ".$request['redirectedUrl']);
+}else{
+    print "<pre>";
+    print_r($request);
+    print "</pre>";
+}
