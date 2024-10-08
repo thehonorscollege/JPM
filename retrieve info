@@ -1,0 +1,8 @@
+require_once 'uh/vendors/jpmorgan/checkout.php';
+$p = new checkout('/publish/lib/auth/jp_morgan_payment_configs/test-certs/config1.json');
+$p->addToConfig('accessToken',$_COOKIE['aToken']);
+$p->addToConfig('orderNumber',$_COOKIE['tOrderNumber']);
+
+print "<pre>";
+print_r($p->getNotification('-2 min',$_COOKIE['tOrderNumber']));
+print "</pre>";
