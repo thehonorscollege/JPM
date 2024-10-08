@@ -1,0 +1,6 @@
+return [
+    "access_token" => "",
+    "token_type" => "error",
+    "expires_in" => "",
+    "bearer_token" => $this->config['jwtToken']
+];
