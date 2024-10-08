@@ -1,0 +1,5 @@
+$checkout->getConfig('key');
+
+// to get all keys as an array
+
+$checkout->getConfig();
